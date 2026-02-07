@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服务器状态</title>
+    <style>
+        /* 重置默认样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        hr {
+            margin: 15px 0;
+            border: none;
+            border-top: 1px solid #ddd;
+        }
+
+        /* 核心：并排容器 */
+        .server-container {
+            display: flex;
+            flex-wrap: wrap; /* 小屏幕自动换行 */
+            gap: 2%; /* 两个模块之间的间距 */
+            margin-top: 15px;
+        }
+
+        /* 每个服务器模块的样式 */
+        .server-module {
+            flex: 1; /* 平分容器宽度 */
+            min-width: 300px; /* 小屏幕最小宽度，保证可读性 */
+        }
+
+        /* iframe样式统一 */
+        .server-module iframe {
+            width: 100%;
+            height: 700px; /* 统一高度，修正原aut错误 */
+            border: 0;
+        }
+
+        /* 标题样式优化 */
+        .server-module h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>服务器</h1>
+    <hr>
+    <h2>guanmuzhi</h2>
+    
+    <!-- 并排容器 -->
+    <div class="server-container">
+        <!-- Java模块 -->
+        <div class="server-module">
+            <h3>Java</h3>
+            <iframe id="mc-status-xm-rainplay-cn-44729" 
+                    scrolling="no" 
+                    src="https://motd.minebbs.com/iframe?ip=xm.rainplay.cn&port=44729&stype=auto&dark=false"></iframe>
+        </div>
+
+        <!-- Bedrock模块 -->
+        <div class="server-module">
+            <h3>Bedrock</h3>
+            <iframe id="mc-status-udpsq-rainplay-cn-33164" 
+                    scrolling="no" 
+                    src="https://motd.minebbs.com/iframe?ip=udpsq.rainplay.cn&port=33164&stype=auto&dark=false"></iframe>
+        </div>
+    </div>
+</body>
+</html>
